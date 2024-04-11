@@ -1,0 +1,257 @@
+/* slider stlying */
+.slider {
+    width : 100%;
+    height : 450px;
+    margin : 20px auto;
+
+}
+#imgcontainer {
+    width : 100%;
+    height: 100%;
+    object-fit: contain;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* text styling */
+p {
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 900;
+    color: red;
+}
+h2 {
+    text-align: center;
+    font-weight: 700;
+}
+/* button styling */
+#submit {
+      background-color: blue;
+     float: right;
+     border: none;
+     padding : 15px 32px;
+     color: white;
+     border-radius: 12px;
+}
+
+/* pop-up form */
+#payment-form {
+    position: fixed;
+    width: 50%;
+    height: 450px;
+    background-color: #d4d5d9;
+    padding: 10px;
+    margin: auto;
+    top :0;
+    bottom : 0;
+    right: 0;
+    left : 0;
+    z-index: 10;
+    display: none;
+    border-radius: 12px;
+}
+form p {
+    text-align: left;
+}
+input {
+    width: 90%;
+    border: none;
+    padding: 15px;
+}
+
+/* wishlist */
+#wishlist {
+    float: right;
+    background-color: red;
+    color: beige;
+    border-radius: 50%;
+    border: none;
+    padding: 15px 32px;
+
+}
+#div-wishlist {
+    position: fixed;
+    width: 60%;
+    height: 90%;
+    background-color: #e8878a;
+    padding: 10px;
+    margin: auto;
+    z-index: 10;
+    display:none;
+    top :0;
+    bottom : 0;
+    right: 0;
+    left : 0;
+    border-radius: 12px;
+    overflow: auto;
+}
+#closeWishlist {
+ color: white;
+ background-color: red;
+ border: none;
+ border-radius: 50%;
+ padding: 15px 32px;
+ float: right;
+ position: fixed;
+ bottom: 0;
+ right: 0;
+}
+#submit-form { 
+    background-color: blue;
+    border: none;
+    padding : 15px 32px;
+    color: white;
+    border-radius: 12px;
+} 
+/* wishlist form */
+
+.wishlist-form {
+    position: fixed;
+    width: 40%;
+    height: 30%;
+    background-color: #e8878a;
+    padding: 10px;
+    margin: auto;
+    z-index: 10;
+    display:none;
+    top :0;
+    bottom : 0;
+    right: 0;
+    left : 0;
+    border-radius: 12px;
+}
+
+
+#close-wishlist-form {
+    border : "none";
+    background-color: grey;
+    color : white;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 5px;
+    display: block;
+    float: right;
+
+}
+#submit-wishlist-form {
+    border : "none";
+    background-color: grey;
+    color : white;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 5px;
+    float: left;
+}
+
+.label {
+    color: black;
+    margin-bottom: 5px;
+
+}
+.SUV-list .card img {
+    width : 90%;
+
+}
+.SUV-list {
+   width: 50%;
+   margin: auto;
+ }
+
+.SUV-list .card {
+    background: #d4d5d9;
+    padding: 30px;
+    border-radius: 25px;
+    
+    
+}
+.main-container .SUV-list .card .reserve {
+    background-color: red;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+}
+
+ .wishlist {
+    background-color: red;
+    color : white;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 10px;
+    padding: 12px;
+}
+
+.payment {
+    background-color: black;
+    color: white;
+    border : none ;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+
+body {
+    border-radius:12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    background-color:aliceblue;
+    
+}
+
+#contact {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    /* margin-top: 0px; */
+    padding: 12px;
+}
+#about {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.div-item  img {
+    width:30%;
+    height : 70px
+}
+.div-item {
+    width: 95%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+   
+    background-color: #6d3e05 ;
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.div-item .carName {
+    padding: 10px ;
+    flex-direction: row;
+    color:  white;
+    font-weight: 500;
+    font-size: large;
+}
+ .div-item .price {
+    padding: 10px;
+    color: whitesmoke;;
+    font-weight: 500;
+ }
+
+ .div-item .delbtn {
+   margin-top: 10px;
+    height: 30px;
+    margin-left: 200px;
+    border-radius: 12px;
+    border: none;
+ }
+
+
+
+
+
