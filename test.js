@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <h1> CAR ID: ${car.id} </h1>
                 <img src = ${car.image}
             <h5> Name : ${car.name} </h5>
+            <div> Category : ${car.category} </div>
             <div class = "price"> Price : KSH ${car.price}  </div>
             <div> Brand : ${car.brand} <div>
             <div>  Availabilty : In stock </div>
