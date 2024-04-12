@@ -41,7 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 addDataToHtml()
             })
-
+           .catch (error => {
+            alert ("ERROR")
+            console.log(error.message)
+           })
     }
     initSuv()
 
@@ -112,6 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
             })
                 .then(res => res.json())
                 .then(data => console.log(data))
+                .catch (error => {
+                    alert ("ERROR")
+                    console.log(error.message)
+                   })
 
 
 
@@ -137,6 +144,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
             .then(res => res.json())
             .then(data => { console.log(data) })
+            .catch (error => {
+                alert ("ERROR")
+                console.log(error.message)
+               })
     }
     function handledelete(id) {
         fetch(`http://localhost:3000/wishlist/${id}`, {
@@ -199,6 +210,10 @@ if (input1) { if (input2) { if (input3) {
         })
             .then(res => res.json())
             .then(data => console.log(data))
+            .catch (error => {
+                alert ("ERROR")
+                console.log(error.message)
+               })
  form2.reset ()}}}
     })
 
