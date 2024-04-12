@@ -2,15 +2,15 @@
 #### Date, 12/04/2024
 #### By *Mercy Mokeira Oroo*
 ## Description
-It's a website that displays cars that are avalaible for sale in a certian company and allows the prospective buyers to get payment information if they wish to purchase the cars.
+It's a website that displays cars available for sale in a certain company and allows prospective buyers to get payment information if they wish to purchase the cars.
 ## Installation
-Use git clone in order to download the documents from GitHub.
+Use git clone to download the documents from GitHub.
 ## Installation Requirments
 Git
 ### Installation Instructions
 Git clone git@github.com:MercyOroo1/MercyOroo_Phase-1-project-WheelProMotors.git
 # Live link
-
+https://mercyoroo1.github.io/MercyOroo_Phase-1-project-WheelProMotors/
 ## Technologies used
 1. HTML
 1. CSS
