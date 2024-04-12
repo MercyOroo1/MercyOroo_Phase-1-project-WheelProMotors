@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //another array that will hold the cars that will be added to your wishlist
     let wishlistHTML = document.querySelector("#div-wishlist")
 
-// this function adds the fetched data to the webpage where it will be visible to ther user
+    // this function adds the fetched data to the webpage where it will be visible to ther user
     const addDataToHtml = () => {
         listProduct.innerHTML = ""
         if (listProducts.length > 0) {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         }
     }
-//This function fetches data from the server and takes a callback function which appends the fetched data to the DOM
+    //This function fetches data from the server and takes a callback function which appends the fetched data to the DOM
     const initSuv = () => {
         fetch("http://localhost:3000/SUV")
             .then(res => res.json())
@@ -41,29 +41,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 addDataToHtml()
             })
-
+            .catch(error => {
+                alert("ERROR")
+                console.log(error.message)
+            })
     }
     initSuv()
 
-// grabs the div that contains the wishlist form that will be used to add cars to the wishlist
+    // grabs the div that contains the wishlist form that will be used to add cars to the wishlist
     let wishlistForm = document.querySelector(".wishlist-form")
-//grabs the button that will be used to close the wishlist form
+    //grabs the button that will be used to close the wishlist form
     let closeWishlistForm = document.querySelector("#close-wishlist-form")
     // adds an event listener within the div that contains the fetched data
     listProduct.addEventListener("click", (event) => {
         event.preventDefault() //prvents the page from refreshing
         let positionClick = event.target //targets the button that is clicked
 
-// if the button contains a class name of wishlist, then the wish list form will be displayed as a popup window
+        // if the button contains a class name of wishlist, then the wish list form will be displayed as a popup window
         if (positionClick.classList.contains("wishlist")) {
             wishlistForm.style.display = 'block'
         }
-//the close wishlist form makes the form to disappear
+        //the close wishlist form makes the form to disappear
         closeWishlistForm.addEventListener("click", (e) => {
             e.preventDefault()
             wishlistForm.style.display = "none"
         })
-// selects the wish list form itself and adds a submit event to it
+        // selects the wish list form itself and adds a submit event to it
         let form = document.querySelector("#wishlist-form")
         form.addEventListener("submit", (e) => {
             e.preventDefault() //prevents the page from refreshing
@@ -112,6 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
             })
                 .then(res => res.json())
                 .then(data => console.log(data))
+                .catch(error => {
+                    alert("ERROR")
+                    console.log(error.message)
+                })
 
 
 
@@ -137,30 +144,21 @@ document.addEventListener("DOMContentLoaded", () => {
         })
             .then(res => res.json())
             .then(data => { console.log(data) })
+            .catch(error => {
+                alert("ERROR")
+                console.log(error.message)
+            })
     }
-    function handledelete(id) {
-        fetch(`http://localhost:3000/wishlist/${id}`, {
-            method: "DELETE",
-            headers: {
-                'Content-Type': "application.json"
-            }
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
 
-
-
-
-    }
     //selects the payment button on each card 
     let paymentButton = document.querySelector(".test")
     //selects the div containing the payment form 
     let popForm = document.querySelector("#payment-form")
-   //selects the close form button on the payment form
+    //selects the close form button on the payment form
     let closeForm = document.querySelector("#submit")
     let form2 = document.querySelector("#main-payment-form")
-    
-//adds an event listener within the div that contains fetched data from the server
+
+    //adds an event listener within the div that contains fetched data from the server
     listProduct.addEventListener("click", (event) => {
         event.preventDefault() //prevents the page from refreshing
         let positionClick2 = event.target
@@ -170,36 +168,45 @@ document.addEventListener("DOMContentLoaded", () => {
             popForm.style.display = 'block'
 
         }
-//closes the pop up window
+        //closes the pop up window
         closeForm.addEventListener("click", (e) => {
             e.preventDefault()
             popForm.style.display = "none"
         })
     })
-//adds a submit event to the pop up form
-form2.addEventListener("submit", (e) => {
+    //adds a submit event to the pop up form
+    form2.addEventListener("submit", (e) => {
         e.preventDefault() //prevernts form from refreshing
- //selects the each of the inputs that are entered by the user 
+        //selects the each of the inputs that are entered by the user 
         const input1 = e.target.name.value
         const input2 = e.target.email.value
         const input3 = e.target.car_id.value
 
-//ensures that each value in the form has been entered before submitting the form
-if (input1) { if (input2) { if (input3) {
-        fetch("http://localhost:3000/Buyers", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                name: input1,
-                email: input2,
-                car_id: input3
-            })
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
- form2.reset ()}}}
+        //ensures that each value in the form has been entered before submitting the form
+        if (input1) {
+            if (input2) {
+                if (input3) {
+                    fetch("http://localhost:3000/Buyers", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            name: input1,
+                            email: input2,
+                            car_id: input3
+                        })
+                    })
+                        .then(res => res.json())
+                        .then(data => console.log(data))
+                        .catch(error => {
+                            alert("ERROR")
+                            console.log(error.message)
+                        })
+                    form2.reset()
+                }
+            }
+        }
     })
 
 
